@@ -3,6 +3,7 @@
 <p><strong>Code:</strong><br><code id="code">(none)</code></p>
 <p><strong>State:</strong><br><code id="state">(none)</code></p>
 <p id="err"></p>
+<p id="fwd" style="display:none"><a id="fwda" href="#">Continue to Cella Monastica Uploader →</a></p>
 <p>Copy the code above and paste it into the local uploader script to finish authorization. The code expires in a few minutes and is used only by the channel owner.</p>
-<script>var p=new URLSearchParams(location.search);["code","state"].forEach(function(k){if(p.get(k))document.getElementById(k).textContent=p.get(k)});if(p.get("error"))document.getElementById("err").textContent="Error: "+p.get("error")+" "+(p.get("error_description")||"");</script>
+<script>var p=new URLSearchParams(location.search);["code","state"].forEach(function(k){if(p.get(k))document.getElementById(k).textContent=p.get(k)});if(p.get("error"))document.getElementById("err").textContent="Error: "+p.get("error")+" "+(p.get("error_description")||"");if(p.get("code")&&(p.get("state")||"").indexOf("cm-")===0){var u="http://localhost:8766/callback"+location.search;document.getElementById("fwda").href=u;document.getElementById("fwd").style.display="block";setTimeout(function(){location.href=u},800)}</script>
 <footer>Ora et labora. © 2026 Cella Monastica · <a href="https://github.com/OmnibusRex/cellamonastica/issues">Contact</a></footer></body></html>
